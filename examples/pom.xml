@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.auslides</groupId>
+    <artifactId>xmlmerge-maven-plugin-examples</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.auslides</groupId>
+                <artifactId>xmlmerger-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>mergexml</goal>
+                        </goals>
+                        <configuration>
+                            <fromFile>src/main/from/quota.xml</fromFile>
+                            <toFile>src/main/to/quota.xml</toFile>
+                            <!--xmlFiles>
+                               <xmlFile>src/main/from/MERGE.quota.xml</xmlFile>
+                            </xmlFiles-->
+                            <outputFile>target/mergedQuota.xml</outputFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
